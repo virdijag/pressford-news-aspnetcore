@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+@foreach (var article in Model.Articles)
+{
+    <div class="row container">
+        <div class="card heading bg-light card-text border-primary ">
+            <div class="card-body text-primary">@article.Title</div>
+        </div>
+    </div>
+}
+
+   

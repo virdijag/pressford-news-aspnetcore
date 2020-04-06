@@ -1,0 +1,21 @@
+﻿@model ArticleViewModel
+
+@foreach (var comment in Model.ArticleComments)
+{
+    <div class="row container d-flex  justify-content-center">
+
+        <div class="card border-secondary mb-3 w-75">
+            <div class="card-header">@comment.CommenterName</div>
+            <div class="card-body text-secondary">
+                @*<h5 class="card-title">Secondary card title</h5>*@
+                <blockquote class="blockquote mb-0">
+                    <cite title="Source Title">
+                        <p>@comment.Text</p>
+                    </cite>
+
+                </blockquote>
+            </div>
+        </div>
+        
+    </div>
+}

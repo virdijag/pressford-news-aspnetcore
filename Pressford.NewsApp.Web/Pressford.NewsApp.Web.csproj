@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>b59c2917-0c27-44c6-a1c6-01eb7c500148</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pressford.NewsApp.Common\Pressford.NewsApp.Common.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Data.Entities\Pressford.NewsApp.Data.Entities.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.IdentityProvider\Pressford.NewsApp.IdentityProvider.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Service.Interfaces\Pressford.NewsApp.Service.Interfaces.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Service\Pressford.NewsApp.Service.csproj" />
+  </ItemGroup>
+
+</Project>

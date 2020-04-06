@@ -1,0 +1,47 @@
+﻿@model ArticleViewModel
+
+<div class="row container voffset5 bg-light">
+    <form method="post" asp-action="AddArticleLike">
+        <div class="container text-center">
+            <h2>@Model.Title</h2>
+        </div>
+        <br />
+        <div class="row d-flex">
+            <div class="card-body">
+                <p>
+                    @Model.Body
+                </p>
+            </div>
+            <br />
+        </div>
+        <div class="row container text-center">
+            Author: <cite title="Source Title"> @Model.Author</cite>
+        </div>
+        <div class="row container text-center">
+            Published Date: @Model.PublishedDateTime
+        </div>
+        <div class="float-lg-right">
+            Number of Likes : @Model.NumberOfLikes
+
+            @if (!Model.LikeLimitReached)
+            {
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Title" />
+                <input type="hidden" asp-for="Body" />
+                <input type="hidden" asp-for="Author" />
+                <input type="hidden" asp-for="PublishedDateTime" />
+                <input type="hidden" asp-for="NumberOfLikes" />
+                <input type="hidden" asp-for="LikeLimitReached" />
+                <input type="hidden" asp-for="ArticleComments"/>
+
+                <input type="submit" value="Like Article" class="btn  btn-info text-light" />
+            </div>
+            }
+            else
+            {
+        <button type="button" class="btn btn-danger">Like Limit Reached</button>                              
+            }
+        </div>
+    </form>
+</div>

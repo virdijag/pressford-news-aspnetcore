@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pressford: @ViewBag.Title</title>
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <header class="bg-dark">
+        <partial name="~/Views/Shared/_navbar.cshtml" />
+    </header>
+    <section class="container main-body">
+        @RenderBody()
+    </section>
+    <footer class="bg-dark  fixed-bottom">
+        <div class="text-center">&copy;Copyright @DateTime.Now.Year Pressford Consulting Limited</div>
+    </footer>
+
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>
+
+

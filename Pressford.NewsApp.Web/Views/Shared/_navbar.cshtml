@@ -1,0 +1,31 @@
+﻿<nav class="navbar navbar-dark bg-dark navbar-expand-md container">
+    <h1 class="navbar-brand">Pressford Consulting</h1>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    @if (UserProfileIdentity.UserDetails?.Identity != null)
+    {
+        <div id="theMenu" class="navbar-collapse collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="App" asp-action="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Latest News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Global</a>
+                </li>
+                <li class="nav-item">
+                    @if (UserProfileIdentity.UserDetails.Identity.IsPublisher())
+                    {
+                        <a class="nav-link" asp-controller="Admin" asp-action="Dashboard">Admin</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Account" asp-action="LogOut">Log Out: @UserProfileIdentity.UserDetails.Identity.GetName()</a>
+                </li>
+            </ul>
+        </div>
+    }
+</nav>

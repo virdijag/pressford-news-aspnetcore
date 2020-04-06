@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pressford.NewsApp.Common\Pressford.NewsApp.Common.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Data.Entities\Pressford.NewsApp.Data.Entities.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Ef.Core.DataAccess\Pressford.NewsApp.Ef.Core.DataAccess.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.IdentityProvider\Pressford.NewsApp.IdentityProvider.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Repository.Interfaces\Pressford.NewsApp.Repository.Interfaces.csproj" />
+    <ProjectReference Include="..\Pressford.NewsApp.Repository\Pressford.NewsApp.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

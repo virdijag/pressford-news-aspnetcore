@@ -1,0 +1,37 @@
+﻿@model DashboardViewModel
+<div class="d-flex container justify-content-center">
+
+    <div class="table-wrapper">
+        <div class="table-title">
+            <a class="btn btn-success add-new" asp-controller="Admin" asp-action="CreateArticle">Create New</a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>NumberOfLikes</th>
+                    <th>Published Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var article in Model.Articles)
+                {
+                    <tr>
+                        <td>@article.Author</td>
+                        <td>@article.Title</td>
+                        <td>@article.NumberOfLikes</td>
+                        <td>@article.PublishedDateTime</td>
+                        <td>
+                            <a class="btn btn-info" asp-controller="Admin" asp-action="EditArticle" asp-route-id="@article.Id"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-warning" asp-controller="Admin" asp-action="DeleteArticle" asp-route-id="@article.Id"><i class="fa fa-trash-o fa-lg"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+ 

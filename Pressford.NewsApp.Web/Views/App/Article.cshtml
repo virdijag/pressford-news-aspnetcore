@@ -1,0 +1,21 @@
+﻿@model ArticleViewModel
+@{
+    ViewBag.Title = "Article";
+}
+
+<partial name="~/Views/App/_articlemain.cshtml" />
+<hr />
+<h2>Comments</h2>
+<div class="row form-inline container">
+    <form method="post" asp-action="AddComment">
+        <div class="form-group">
+            <input type="hidden" asp-for="Id" />
+            <input type="text" asp-for="Comment.Text" class="form-control" />
+            <span asp-validation-for="Comment.Text" class="text-danger"></span>
+            <button type="submit" class="btn btn-primary text-light">Add Comment</button>
+        </div>
+    </form>
+</div>
+<partial name="~/Views/App/_comments.cshtml" />
+
+
