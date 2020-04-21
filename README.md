@@ -1,4 +1,4 @@
-# Pressford News Assessment
+# Coding Exercise: Pressford News
 
 Using .NET Core
 
